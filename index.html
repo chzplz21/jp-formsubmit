@@ -18,7 +18,7 @@
 	<div class="row">
 		<div class="col-md-12 order-md-1">
 			<h4 class="mb-3">Person To Contact</h4>
-			<form method="post" action="submit.php">
+			<form id = "mainForm" method="post">
 				<div class="mb-3">
 					<label for="username">Date</label>
 					<div class="input-group">
@@ -31,7 +31,7 @@
 					<label for="companyName">Company Name</label>
 					<div class="input-group">
 						<div class="input-group-prepend"></div>
-						<input class="form-control" id="companyName" v-model="companyName" placeholder="Company name" required="" type="text">
+						<input data-measurementName = "kilowatts" class="form-control" id="companyName" v-model="companyName" placeholder="Company name" required="" type="text">
 						<div class="invalid-feedback" style="width: 100%;"> Your Company name is required.  </div>
 					</div>
 				</div>
@@ -2082,7 +2082,7 @@
 						<textarea class="form-control" rows="8" v-model="additionalComments"></textarea>
 					</div>
 				</div><br>
-				<button class="btn btn-primary btn-lg btn-block" type="submit" v-on:click.prevent="submit">Submit</button>
+				<button id = "submitButton" class="btn btn-primary btn-lg btn-block" type="submit" v-on:click.prevent="submit">Submit</button>
 			</form>
 		</div>
 	</div>
@@ -2108,9 +2108,10 @@
 
 <script>
 jQuery(function($) {
-
+/*
 	new Vue({
 		el: '#form',
+		
 		data: {
 			date: '',
 			companyName: '',
@@ -2217,6 +2218,7 @@ jQuery(function($) {
 			whereTests: [],
 			additionalComments: '',
 		},
+		
 
 		computed: {
 			isLiquidAcidicOrBasic: function() { return this.liquidType.indexOf('Acidic') >= 0 || this.liquidType.indexOf('Basic') >= 0; },
@@ -2231,8 +2233,9 @@ jQuery(function($) {
 		methods: {
 			submit: function() {
 				var vm = this;
-
+				yo(vm.$data);
 				$.post('submit.php', vm.$data, function() {
+					
 					alert("Submitted");
 				});
 			},
@@ -2244,10 +2247,15 @@ jQuery(function($) {
 				console.log(elem.attr('v-model'));
 		});
 
+*/
+
 
 
 });
 </script>
 
+<script src="testing.js"></script>
+
 </body>
+
 </html>

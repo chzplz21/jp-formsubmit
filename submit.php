@@ -69,7 +69,43 @@ $fields = array (
   );
 
 
+ 
+ //Gets post data, converts json array of objects to php Big Array of arrays
+$BigArray = json_decode($_POST["mydata"], true);
 
+foreach($BigArray as &$smallArray) {
+    $valueToSearch = $smallArray["name"];
+    if (isset($fields[$valueToSearch])) {
+      $smallArray["name"] = $fields[$valueToSearch];
+ 
+    }
+  
+ // file_put_contents("log.txt", print_r($smallArray, true), FILE_APPEND);
+  
+}
+
+
+file_put_contents("log.txt", print_r($BigArray, true));
+
+
+
+
+
+
+
+
+
+
+/*
+ foreach($_POST as $object) {
+  file_put_contents("log.txt", $object);
+ }
+*/
+ 
+
+
+
+/*
 $body = '';
 foreach ($fields as $field => $label) {
 	if (isset($_POST[$field])) {
@@ -81,13 +117,12 @@ foreach ($fields as $field => $label) {
 			$value = $_POST[$field];
 		}
 
-
 		$body .= "$label: " . $value . "\r\n\r\n";
 	}
 }
+*/
 
 
-
-mail('alberto@jp-webs.com', 'Steri Funda Filter Questionnaire', $body);
+//mail('alberto@jp-webs.com', 'Steri Funda Filter Questionnaire', $body);
 
 

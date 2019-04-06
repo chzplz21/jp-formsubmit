@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" rel="stylesheet">
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+<title>Funda Filter Questionnaire</title>
+</head>
+
+
+<body class="bg-light">
+<div class="container" id="form">
+	<div class="py-5 text-center">
+		<!-- <img class="d-block mx-auto mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+		<h2>Funda Filter Questionnaire</h2>
+	</div>
+	<div class="row">
+		<div class="col-md-12 order-md-1">
+			<h4 class="mb-3">Person To Contact</h4>
+			<form method="post" action="submit.php">
+				<div class="mb-3">
+					<label for="username">Date</label>
+					<div class="input-group">
+						<div class="input-group-prepend"></div>
+						<input class="form-control" id="date" v-model="date" placeholder="MM-DD-YYYY" required type="text">
+						<div class="invalid-feedback" style="width: 100%;"> Date is required.</div>
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="companyName">Company Name</label>
+					<div class="input-group">
+						<div class="input-group-prepend"></div>
+						<input class="form-control" id="companyName" v-model="companyName" placeholder="Company name" required="" type="text">
+						<div class="invalid-feedback" style="width: 100%;"> Your Company name is required.  </div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label for="firstName">First name</label>
+					   	<input class="form-control" id="firstName" v-model="firstName" placeholder="First Name" required="" type="text" value="">
+						<div class="invalid-feedback">
+							Valid first name is required.
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<label for="lastName">Last name</label>
+						<input class="form-control" id="lastName" v-model="lastName" placeholder="Last Name" type="text">
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="username">Title</label>
+					<div class="input-group">
+						<div class="input-group-prepend"></div>
+						<input class="form-control" id="username" v-model="title" placeholder="Title" type="text">
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="address">Address</label>
+				   	<input class="form-control" id="address" v-model="address" placeholder="1234 Main St" type="text">
+					<div class="invalid-feedback">
+						Please enter your shipping address.
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+				   	<input class="form-control" id="address2" v-model="address2" placeholder="Apartment or suite" type="text">
+				</div>
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<label for="country">Country</label>
+						<select class="custom-select d-block w-100" v-model="country" id="country">
+							<option value="">Choose...</option>
+							<option>United States</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Albania">
+							Albania
+							</option>
+							<option value="Algeria">
+							Algeria
+							</option>
+							<option value="American Samoa">
+							American Samoa
+							</option>
+							<option value="Andorra">
+							Andorra
+							</option>
+							<option value="Angola">
+							Angola
+							</option>
+							<option value="Anguilla">
+							Anguilla
+							</option>
+							<option value="Antigua and Barbuda">
+							Antigua and Barbuda
+							</option>
+							<option value="Argentina">
+							Argentina
+							</option>
+							<option value="Armenia">
+							Armenia
+							</option>
+							<option value="Aruba">
+							Aruba
+							</option>
+							<option value="Australia">
+							Australia
+							</option>
+							<option value="Austria">
+							Austria
+							</option>
+							<option value="Azerbaijan">
+							Azerbaijan
+							</option>
+							<option value="The Bahamas">
+							The Bahamas
+							</option>
+							<option value="Bahrain">
+							Bahrain
+							</option>
+							<option value="Bangladesh">
+							Bangladesh
+							</option>
+							<option value="Barbados">
+							Barbados
+							</option>
+							<option value="Belarus">
+							Belarus
+							</option>
+							<option value="Belgium">
+							Belgium
+							</option>
+							<option value="Belize">
+							Belize
+							</option>
+							<option value="Benin">
+							Benin
+							</option>
+							<option value="Bermuda">
+							Bermuda
+							</option>
+							<option value="Bhutan">
+							Bhutan
+							</option>
+							<option value="Bolivia">
+							Bolivia
+							</option>
+							<option value="Bosnia and Herzegovina">
+							Bosnia and Herzegovina
+							</option>
+							<option value="Botswana">
+							Botswana
+							</option>
+							<option value="Brazil">
+							Brazil
+							</option>
+							<option value="Brunei">
+							Brunei
+							</option>
+							<option value="Bulgaria">
+							Bulgaria
+							</option>
+							<option value="Burkina Faso">
+							Burkina Faso
+							</option>
+							<option value="Burundi">
+							Burundi
+							</option>
+							<option value="Cambodia">
+							Cambodia
+							</option>
+							<option value="Cameroon">
+							Cameroon
+							</option>
+							<option value="Canada">
+							Canada
+							</option>
+							<option value="Cape Verde">
+							Cape Verde
+							</option>
+							<option value="Cayman Islands">
+							Cayman Islands
+							</option>
+							<option value="Central African Republic">
+							Central African Republic
+							</option>
+							<option value="Chad">
+							Chad
+							</option>
+							<option value="Chile">
+							Chile
+							</option>
+							<option value="China">
+							China
+							</option>
+							<option value="Christmas Island">
+							Christmas Island
+							</option>
+							<option value="Cocos (Keeling) Islands">
+							Cocos (Keeling) Islands
+							</option>
+							<option value="Colombia">
+							Colombia
+							</option>
+							<option value="Comoros">
+							Comoros
+							</option>
+							<option value="Congo">
+							Congo
+							</option>
+							<option value="Cook Islands">
+							Cook Islands
+							</option>
+							<option value="Costa Rica">
+							Costa Rica
+							</option>
+							<option value="Cote d&#x27;Ivoire">
+							Cote d&#x27;Ivoire
+							</option>
+							<option value="Croatia">
+							Croatia
+							</option>
+							<option value="Cuba">
+							Cuba
+							</option>
+							<option value="Cyprus">
+							Cyprus
+							</option>
+							<option value="Czech Republic">
+							Czech Republic
+							</option>
+							<option value="Democratic Republic of the Congo">
+							Democratic Republic of the Congo
+							</option>
+							<option value="Denmark">
+							Denmark
+							</option>
+							<option value="Djibouti">
+							Djibouti
+							</option>
+							<option value="Dominica">
+							Dominica
+							</option>
+							<option value="Dominican Republic">
+							Dominican Republic
+							</option>
+							<option value="Ecuador">
+							Ecuador
+							</option>
+							<option value="Egypt">
+							Egypt
+							</option>
+							<option value="El Salvador">
+							El Salvador
+							</option>
+							<option value="Equatorial Guinea">
+							Equatorial Guinea
+							</option>
+							<option value="Eritrea">
+							Eritrea
+							</option>
+							<option value="Estonia">
+							Estonia
+							</option>
+							<option value="Ethiopia">
+							Ethiopia
+							</option>
+							<option value="Falkland Islands">
+							Falkland Islands
+							</option>
+							<option value="Faroe Islands">
+							Faroe Islands
+							</option>
+							<option value="Fiji">
+							Fiji
+							</option>
+							<option value="Finland">
+							Finland
+							</option>
+							<option value="France">
+							France
+							</option>
+							<option value="French Polynesia">
+							French Polynesia
+							</option>
+							<option value="Gabon">
+							Gabon
+							</option>
+							<option value="The Gambia">
+							The Gambia
+							</option>
+							<option value="Georgia">
+							Georgia
+							</option>
+							<option value="Germany">
+							Germany
+							</option>
+							<option value="Ghana">
+							Ghana
+							</option>
+							<option value="Gibraltar">
+							Gibraltar
+							</option>
+							<option value="Greece">
+							Greece
+							</option>
+							<option value="Greenland">
+							Greenland
+							</option>
+							<option value="Grenada">
+							Grenada
+							</option>
+							<option value="Guadeloupe">
+							Guadeloupe
+							</option>
+							<option value="Guam">
+							Guam
+							</option>
+							<option value="Guatemala">
+							Guatemala
+							</option>
+							<option value="Guernsey">
+							Guernsey
+							</option>
+							<option value="Guinea">
+							Guinea
+							</option>
+							<option value="Guinea-Bissau">
+							Guinea-Bissau
+							</option>
+							<option value="Guyana">
+							Guyana
+							</option>
+							<option value="Haiti">
+							Haiti
+							</option>
+							<option value="Honduras">
+							Honduras
+							</option>
+							<option value="Hong Kong">
+							Hong Kong
+							</option>
+							<option value="Hungary">
+							Hungary
+							</option>
+							<option value="Iceland">
+							Iceland
+							</option>
+							<option value="India">
+							India
+							</option>
+							<option value="Indonesia">
+							Indonesia
+							</option>
+							<option value="Iran">
+							Iran
+							</option>
+							<option value="Iraq">
+							Iraq
+							</option>
+							<option value="Ireland">
+							Ireland
+							</option>
+							<option value="Israel">
+							Israel
+							</option>
+							<option value="Italy">
+							Italy
+							</option>
+							<option value="Jamaica">
+							Jamaica
+							</option>
+							<option value="Japan">
+							Japan
+							</option>
+							<option value="Jersey">
+							Jersey
+							</option>
+							<option value="Jordan">
+							Jordan
+							</option>
+							<option value="Kazakhstan">
+							Kazakhstan
+							</option>
+							<option value="Kenya">
+							Kenya
+							</option>
+							<option value="Kiribati">
+							Kiribati
+							</option>
+							<option value="North Korea">
+							North Korea
+							</option>
+							<option value="South Korea">
+							South Korea
+							</option>
+							<option value="Kosovo">
+							Kosovo
+							</option>
+							<option value="Kuwait">
+							Kuwait
+							</option>
+							<option value="Kyrgyzstan">
+							Kyrgyzstan
+							</option>
+							<option value="Laos">
+							Laos
+							</option>
+							<option value="Latvia">
+							Latvia
+							</option>
+							<option value="Lebanon">
+							Lebanon
+							</option>
+							<option value="Lesotho">
+							Lesotho
+							</option>
+							<option value="Liberia">
+							Liberia
+							</option>
+							<option value="Libya">
+							Libya
+							</option>
+							<option value="Liechtenstein">
+							Liechtenstein
+							</option>
+							<option value="Lithuania">
+							Lithuania
+							</option>
+							<option value="Luxembourg">
+							Luxembourg
+							</option>
+							<option value="Macau">
+							Macau
+							</option>
+							<option value="Macedonia">
+							Macedonia
+							</option>
+							<option value="Madagascar">
+							Madagascar
+							</option>
+							<option value="Malawi">
+							Malawi
+							</option>
+							<option value="Malaysia">
+							Malaysia
+							</option>
+							<option value="Maldives">
+							Maldives
+							</option>
+							<option value="Mali">
+							Mali
+							</option>
+							<option value="Malta">
+							Malta
+							</option>
+							<option value="Marshall Islands">
+							Marshall Islands
+							</option>
+							<option value="Martinique">
+							Martinique
+							</option>
+							<option value="Mauritania">
+							Mauritania
+							</option>
+							<option value="Mauritius">
+							Mauritius
+							</option>
+							<option value="Mayotte">
+							Mayotte
+							</option>
+							<option value="Mexico">
+							Mexico
+							</option>
+							<option value="Micronesia">
+							Micronesia
+							</option>
+							<option value="Moldova">
+							Moldova
+							</option>
+							<option value="Monaco">
+							Monaco
+							</option>
+							<option value="Mongolia">
+							Mongolia
+							</option>
+							<option value="Montenegro">
+							Montenegro
+							</option>
+							<option value="Montserrat">
+							Montserrat
+							</option>
+							<option value="Morocco">
+							Morocco
+							</option>
+							<option value="Mozambique">
+							Mozambique
+							</option>
+							<option value="Myanmar">
+							Myanmar
+							</option>
+							<option value="Nagorno-Karabakh">
+							Nagorno-Karabakh
+							</option>
+							<option value="Namibia">
+							Namibia
+							</option>
+							<option value="Nauru">
+							Nauru
+							</option>
+							<option value="Nepal">
+							Nepal
+							</option>
+							<option value="Netherlands">
+							Netherlands
+							</option>
+							<option value="Netherlands Antilles">
+							Netherlands Antilles
+							</option>
+							<option value="New Caledonia">
+							New Caledonia
+							</option>
+							<option value="New Zealand">
+							New Zealand
+							</option>
+							<option value="Nicaragua">
+							Nicaragua
+							</option>
+							<option value="Niger">
+							Niger
+							</option>
+							<option value="Nigeria">
+							Nigeria
+							</option>
+							<option value="Niue">
+							Niue
+							</option>
+							<option value="Norfolk Island">
+							Norfolk Island
+							</option>
+							<option value="Turkish Republic of Northern Cyprus">
+							Turkish Republic of Northern Cyprus
+							</option>
+							<option value="Northern Mariana">
+							Northern Mariana
+							</option>
+							<option value="Norway">
+							Norway
+							</option>
+							<option value="Oman">
+							Oman
+							</option>
+							<option value="Pakistan">
+							Pakistan
+							</option>
+							<option value="Palau">
+							Palau
+							</option>
+							<option value="Palestine">
+							Palestine
+							</option>
+							<option value="Panama">
+							Panama
+							</option>
+							<option value="Papua New Guinea">
+							Papua New Guinea
+							</option>
+							<option value="Paraguay">
+							Paraguay
+							</option>
+							<option value="Peru">
+							Peru
+							</option>
+							<option value="Philippines">
+							Philippines
+							</option>
+							<option value="Pitcairn Islands">
+							Pitcairn Islands
+							</option>
+							<option value="Poland">
+							Poland
+							</option>
+							<option value="Portugal">
+							Portugal
+							</option>
+							<option value="Puerto Rico">
+							Puerto Rico
+							</option>
+							<option value="Qatar">
+							Qatar
+							</option>
+							<option value="Republic of the Congo">
+							Republic of the Congo
+							</option>
+							<option value="Romania">
+							Romania
+							</option>
+							<option value="Russia">
+							Russia
+							</option>
+							<option value="Rwanda">
+							Rwanda
+							</option>
+							<option value="Saint Barthelemy">
+							Saint Barthelemy
+							</option>
+							<option value="Saint Helena">
+							Saint Helena
+							</option>
+							<option value="Saint Kitts and Nevis">
+							Saint Kitts and Nevis
+							</option>
+							<option value="Saint Lucia">
+							Saint Lucia
+							</option>
+							<option value="Saint Martin">
+							Saint Martin
+							</option>
+							<option value="Saint Pierre and Miquelon">
+							Saint Pierre and Miquelon
+							</option>
+							<option value="Saint Vincent and the Grenadines">
+							Saint Vincent and the Grenadines
+							</option>
+							<option value="Samoa">
+							Samoa
+							</option>
+							<option value="San Marino">
+							San Marino
+							</option>
+							<option value="Sao Tome and Principe">
+							Sao Tome and Principe
+							</option>
+							<option value="Saudi Arabia">
+							Saudi Arabia
+							</option>
+							<option value="Senegal">
+							Senegal
+							</option>
+							<option value="Serbia">
+							Serbia
+							</option>
+							<option value="Seychelles">
+							Seychelles
+							</option>
+							<option value="Sierra Leone">
+							Sierra Leone
+							</option>
+							<option value="Singapore">
+							Singapore
+							</option>
+							<option value="Slovakia">
+							Slovakia
+							</option>
+							<option value="Slovenia">
+							Slovenia
+							</option>
+							<option value="Solomon Islands">
+							Solomon Islands
+							</option>
+							<option value="Somalia">
+							Somalia
+							</option>
+							<option value="Somaliland">
+							Somaliland
+							</option>
+							<option value="South Africa">
+							South Africa
+							</option>
+							<option value="South Ossetia">
+							South Ossetia
+							</option>
+							<option value="South Sudan">
+							South Sudan
+							</option>
+							<option value="Spain">
+							Spain
+							</option>
+							<option value="Sri Lanka">
+							Sri Lanka
+							</option>
+							<option value="Sudan">
+							Sudan
+							</option>
+							<option value="Suriname">
+							Suriname
+							</option>
+							<option value="Svalbard">
+							Svalbard
+							</option>
+							<option value="eSwatini">
+							eSwatini
+							</option>
+							<option value="Sweden">
+							Sweden
+							</option>
+							<option value="Switzerland">
+							Switzerland
+							</option>
+							<option value="Syria">
+							Syria
+							</option>
+							<option value="Taiwan">
+							Taiwan
+							</option>
+							<option value="Tajikistan">
+							Tajikistan
+							</option>
+							<option value="Tanzania">
+							Tanzania
+							</option>
+							<option value="Thailand">
+							Thailand
+							</option>
+							<option value="Timor-Leste">
+							Timor-Leste
+							</option>
+							<option value="Togo">
+							Togo
+							</option>
+							<option value="Tokelau">
+							Tokelau
+							</option>
+							<option value="Tonga">
+							Tonga
+							</option>
+							<option value="Transnistria Pridnestrovie">
+							Transnistria Pridnestrovie
+							</option>
+							<option value="Trinidad and Tobago">
+							Trinidad and Tobago
+							</option>
+							<option value="Tristan da Cunha">
+							Tristan da Cunha
+							</option>
+							<option value="Tunisia">
+							Tunisia
+							</option>
+							<option value="Turkey">
+							Turkey
+							</option>
+							<option value="Turkmenistan">
+							Turkmenistan
+							</option>
+							<option value="Turks and Caicos Islands">
+							Turks and Caicos Islands
+							</option>
+							<option value="Tuvalu">
+							Tuvalu
+							</option>
+							<option value="Uganda">
+							Uganda
+							</option>
+							<option value="Ukraine">
+							Ukraine
+							</option>
+							<option value="United Arab Emirates">
+							United Arab Emirates
+							</option>
+							<option value="United Kingdom">
+							United Kingdom
+							</option>
+							<option value="Uruguay">
+							Uruguay
+							</option>
+							<option value="Uzbekistan">
+							Uzbekistan
+							</option>
+							<option value="Vanuatu">
+							Vanuatu
+							</option>
+							<option value="Vatican City">
+							Vatican City
+							</option>
+							<option value="Venezuela">
+							Venezuela
+							</option>
+							<option value="Vietnam">
+							Vietnam
+							</option>
+							<option value="British Virgin Islands">
+							British Virgin Islands
+							</option>
+							<option value="Isle of Man">
+							Isle of Man
+							</option>
+							<option value="US Virgin Islands">
+							US Virgin Islands
+							</option>
+							<option value="Wallis and Futuna">
+							Wallis and Futuna
+							</option>
+							<option value="Western Sahara">
+							Western Sahara
+							</option>
+							<option value="Yemen">
+							Yemen
+							</option>
+							<option value="Zambia">
+							Zambia
+							</option>
+							<option value="Zimbabwe">
+							Zimbabwe
+							</option>
+							<option value="other">
+							Other
+							</option>
+						</select>
+					</div>
+					<div class="col-md-4 mb-3">
+						<label for="state">State/Province</label>
+					   	<input class="form-control" id="state" v-model="state">
+					</div>
+					<div class="col-md-3 mb-3">
+						<label for="zip">Postal/Zip</label>
+					   	<input class="form-control" id="zip" v-model="zip" placeholder="" type="text">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<label for="phoneAreaCode">Phone Number</label>
+					   	<input class="form-control" id="phoneAreaCode" v-model="phoneAreaCode" placeholder="Area Code" type="text">
+					</div>
+					<div class="col-md-6 mb-3">
+						<label>Number</label>
+					   	<input class="form-control" v-model="phoneNumber" placeholder="Phone Number" type="text">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<label for="cc-expiration">Fax Number</label>
+					   	<input class="form-control" v-model="faxAreaCode" placeholder="Area Code" type="text">
+					</div>
+					<div class="col-md-6 mb-3">
+						<label for="cc-cvv">Number</label>
+					   	<input class="form-control" v-model="faxNumber" placeholder="Fax Number" type="text">
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="email">Email</label>
+				   	<input class="form-control" v-model="email" id="email" placeholder="you@example.com" required type="email">
+					<div class="invalid-feedback">
+						Please enter a valid email address.
+					</div>
+				</div>
+				<hr class="mb-4">
+
+				<div class="py-5 text-center">
+					<!-- <img class="d-block mx-auto mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+					<h2>Product Information</h2>
+				</div>
+
+
+				<div class="row">
+					<div class="col-12">
+						<p>What is the percentage of solids present?</p>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						<label>Enter<br>Volume</label>
+					   	<input class="form-control" v-model="solidsVolumePercent" placeholder="" type="text">
+					   	<small class="text-muted">By Volume (%)</small>
+					</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						<label>Enter<br>PPM</label>
+					   	<input class="form-control" v-model="solidsPpm" type="text">
+					   	<small class="text-muted">By ppm (%)</small>
+					</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						<label for="cc-number">Enter<br>Weight</label>
+					   	<input class="form-control" id="cc-number" v-model="solidsWeight" placeholder="" type="text">
+					   	<small class="text-muted">By Weight (%)</small>
+					</div>
+					</div>
+				</div>
+
+				<div class="row" v-if="solidsWeight.length != ''">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>What is the bulk density of the cake?</label>
+							<input class="form-control" v-model="solidsBulkDensityWetKgM3" placeholder="" type="text">
+							<small class="text-muted">Wet (kg/m<sup>3</sup>)</small>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>&nbsp;</label>
+							<input class="form-control" v-model="solidsBulkDensityDryKgM3" placeholder="" type="text">
+							<small class="text-muted">Dry (kg/m<sup>3</sup>)</small>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>Describe the liquid phase of the liquid to be filtered (Chemical or technical description)</p>
+					</div>
+					<div class="col-md-8 mb-3">
+						<textarea class="form-control"
+							v-model="liquidPhraseDescription"
+							id="exampleFormControlTextarea1"
+							rows="8"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Is the liquid (Check off as appropriate)</p>
+					</div><!-- FIRST SET OF CHECK OFFS BELOW -->
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="liquidTypeAcidic" type="checkbox" v-model="liquidType" value="Acidic">
+						   	<label class="form-check-label" for="liquidTypeAcidic">Acidic</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="liquidTypeBasic" type="checkbox" v-model="liquidType" value="Basic">
+						   	<label class="form-check-label" for="liquidTypeBasic">Basic</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="liquidTypeNeutral" type="checkbox" v-model="liquidType" value="Neutral">
+						   	<label class="form-check-label" for="liquidTypeNeutral">Neutral</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="liquidTypeToxic" type="checkbox" v-model="liquidType" value="Toxic">
+						   	<label class="form-check-label" for="liquidTypeToxic">Toxic</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="liquidTypeExplosive" type="checkbox" v-model="liquidType" value="Explosive">
+						   	<label class="form-check-label" for="liquidTypeExplosive">Explosive</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="liquidTypePh" type="checkbox" v-model="liquidType" value="pH">
+						   	<label class="form-check-label" for="liquidTypePh">pH</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="liquidTypeOther" type="checkbox" v-model="liquidType" value="Other">
+						   	<label class="form-check-label" for="liquidTypeOther">Other</label>
+						</div>
+					</div><!-- END FIRST SET OF CHECK OFFS -->
+				</div>
+
+
+				<div class="row" v-if="isLiquidAcidicOrBasic">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>If the liquid is acidic or basic, describe the acids or basis</label>
+							<textarea class="form-control" v-model="liquidAcidOrBaseDescription"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" v-if="isLiquidPh">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>pH level</label>
+							<input class="form-control" v-model="liquidPhLevel">
+						</div>
+					</div>
+				</div>
+
+				<div class="row" v-if="isLiquidOther">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Other</label>
+							<input class="form-control" v-model="liquidOther">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What is the specific gravity of the liquid to be filtered?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" v-model="liquidSpecificGravity">
+					   	<small class="text-muted">Enter specific gravity of liquid</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What is its viscosity at filtration temperature?</p>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" v-model="liquidViscosityFiltrationCps">
+					   	<small class="text-muted">cps</small>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" v-model="liquidViscosityFiltrationDegreesF">
+					   	<small class="text-muted">Degrees F</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What is its viscosity at room temperature?</p>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" v-model="liquidViscosityRoomTemperatureCps">
+					   	<small class="text-muted">cps</small>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" v-model="liquidViscosityRoomTemperatureDegreesF">
+					   	<small class="text-muted">Degrees F</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 mb-3">
+						<div class="form-group">
+							<label>Describe the solids which are to be removed</label>
+							<textarea class="form-control" v-model="solidsToBeRemovedDescription" rows="8"></textarea>
+						</div>
+					</div>
+				</div><!-- tricky part table here below i copied code from form best i could -->
+				<div class="row">
+					<div class="col-md-10 mb-3">
+						<p>Are the solids (in the wet and dry stage, before and after washing of the cake)</p>
+					</div>
+					<table class="table table-striped">
+						<tbody>
+						<tr>
+							<th style="border:none">&nbsp;</th>
+							<th class="text-center">Crystalline</th>
+							<th class="text-center">Crumbly</th>
+							<th class="text-center">Slimy</th>
+							<th class="text-center">Sticky</th>
+							<th class="text-center">Pasty</th>
+							<th class="text-center">Hygroscopic</th>
+							<th class="text-center">Not Sure</th>
+						</tr>
+						<tr>
+							<th class="form-matrix-row-headers" style="text-align:left">When Wet</th>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWet" type="radio" v-model="solidsWhenWet" value="Crystalline"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWet" type="radio" v-model="solidsWhenWet" value="Crumbly"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWet" type="radio" v-model="solidsWhenWet" value="Slimy"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWet" type="radio" v-model="solidsWhenWet" value="Sticky"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWet" type="radio" v-model="solidsWhenWet" value="Pasty"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWet" type="radio" v-model="solidsWhenWet" value="Hygroscopic"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWet" type="radio" v-model="solidsWhenWet" value="Not Sure"></td>
+						</tr>
+						<tr>
+							<th class="form-matrix-row-headers" style="text-align:left">When Dry</th>
+							<td class="text-center"><input class="form-radio" name="solidsWhenDry" type="radio" v-model="solidsWhenDry" value="Crystalline"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenDry" type="radio" v-model="solidsWhenDry" value="Crumbly"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenDry" type="radio" v-model="solidsWhenDry" value="Slimy"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenDry" type="radio" v-model="solidsWhenDry" value="Sticky"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenDry" type="radio" v-model="solidsWhenDry" value="Pasty"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenDry" type="radio" v-model="solidsWhenDry" value="Hygroscopic"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenDry" type="radio" v-model="solidsWhenDry" value="Not Sure"></td>
+						</tr>
+						<tr>
+							<th class="form-matrix-row-headers" style="text-align:left">When Washed</th>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWashed" type="radio" v-model="solidsWhenWashed" value="Crystalline"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWashed" type="radio" v-model="solidsWhenWashed" value="Crumbly"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWashed" type="radio" v-model="solidsWhenWashed" value="Slimy"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWashed" type="radio" v-model="solidsWhenWashed" value="Sticky"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWashed" type="radio" v-model="solidsWhenWashed" value="Pasty"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWashed" type="radio" v-model="solidsWhenWashed" value="Hygroscopic"></td>
+							<td class="text-center"><input class="form-radio" name="solidsWhenWashed" type="radio" v-model="solidsWhenWashed" value="Not Sure"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div><!-- end of table -->
+				<br>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What is the particle size in micron?</p>
+					</div>
+					<div class="col-md-3 mb-3">
+						<input class="form-control" v-model="particleSizeAverageMicron" type="text"> <small class="text-muted">Average (micron)</small>
+					</div>
+					<div class="col-md-3 mb-3">
+						<input class="form-control" v-model="particleSizeMinimumMicron" type="text"> <small class="text-muted">Minimum (micron)</small>
+					</div>
+					<div class="col-md-3 mb-3">
+						<input class="form-control" v-model="particleSizeMaximumMicron" type="text"> <small class="text-muted">Maximum (micron)</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What is the sedimentation speed of the solids in the slurry?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" v-model="solidsSedimentationSpeedSlurry" type="text"> <small class="text-muted">(ft/hr)</small>
+					</div>
+				</div><!-- SPECIAL PART -->
+
+				<h2 class="text-center">Process Information</h2>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Is the process</p>
+					</div>
+
+					<div class="form-check">
+						<input class="form-check-input" id="processTypeContinuous" type="radio" name="processType" v-model="processType" value="Continuous">
+						<label class="form-check-label" for="processTypeContinuous">Continuous</label> 
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" id="processTypeBatch" type="radio" name="processType" v-model="processType" value="Batch">
+						<label class="form-check-label" for="processTypeBatch">Batch</label> 
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" id="processTypeBoth" type="radio" name="processType" v-model="processType" value="Both">
+						<label class="form-check-label" for="processTypeBoth">Both</label> 
+					</div>
+
+					<div class="row" v-if="processType == 'Continuous' || processType == 'Both'"> 
+						<div class="col-md-3 mb-3">
+							<p>What is the flow rate of your continuous process?</p>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" id="cc-name" placeholder="" v-model="processTypeContinuousGPM">
+							<small>GPM</small>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" id="cc-number" placeholder="" v-model="processTypeContinuousM3Hr">
+							<small class="text-muted">m<sup>3</sup>/hr</small>
+						</div>
+					</div>
+
+					<div v-if="processType == 'Batch' || processType == 'Both'"> 
+						<div class="row">
+							<div class="col-md-3 mb-3">
+								<p>How many gallons is your batch size?</p>
+							</div>
+
+							<div class="col-md-6 mb-3">
+								<label for="cc-name">Enter <br> Volume</label> 
+								<input type="text" class="form-control" id="cc-name" placeholder="" v-model="processTypeBatchSizeGallons">
+								<small class="text-muted">Batch size in Gallons</small>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-md-3 mb-3">
+								<p>How many batches per 24 hours?</p>
+							</div>
+
+							<div class="col-md-6 mb-3">
+								<label>Enter <br> Volume</label> 
+								<input type="text" class="form-control" v-model="processTypeBatchNumber24Hours">
+								<small class="text-muted">Number of batches in 24 hours.</small>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 mb-3">
+								<p>What is the time span in which a batch must be filtered?</p>
+							</div>
+
+							<div class="col-md-4 mb-3">
+								<label>Enter cps</label>
+								<input type="text" class="form-control" v-model="processTypeBatchFiltrationTimeHrs">
+								<small class="text-muted">Filtration time (hr)</small>
+							</div>
+
+							<div class="col-md-4 mb-3">
+								<label>Enter Degrees F</label>
+								<input type="text" class="form-control" v-model="processTypeBatchBatchTimeHrs">
+								<small class="text-muted">Batch Time (hr)</small>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Is the purpose of your filtration to obtain:</p>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" id="filtrationPurposeCleanFiltrate" type="radio" name="filtrationPurpose" v-model="filtrationPurpose" value="A Clean Filtrate">
+						<label class="form-check-label" for="filtrationPurposeCleanFiltrate">A Clean Filtrate</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" id="filtrationPurposeRecoveryResidue" type="radio" name="filtrationPurpose" v-model="filtrationPurpose" value="Recovery of the Residue">
+						<label class="form-check-label" for="filtrationPurposeRecoveryResidue">Recovery of the Residue</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" id="filtrationPurposeBoth" type="radio" name="filtrationPurpose" v-model="filtrationPurpose" value="Both">
+						<label class="form-check-label" for="filtrationPurposeBoth">Both</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>At what temperature do you wish to filter</p>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" placeholder="" v-model="filterTempC" type="text">
+						<small class="text-muted">Celsius (C)</small>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" placeholder="" v-model="filterTempF" type="text">
+					   	<small class="text-muted">Fahrenheit (F)</small>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Must you wash residue in the filter?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="washResidueYes" type="radio" name="washResidue" v-model="washResidue" value="Yes">
+						   	<label class="form-check-label" for="washResidueYes">Yes</label> 
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="washResidueNo" type="radio" name="washResidue" v-model="washResidue" value="No">
+						   	<label class="form-check-label" for="washResidueNo">No</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" v-if="washResidue == 'Yes'">
+					<div class="col-md-3 mb-3">
+						<p>What is the wash medium and temperature?</p>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" id="cc-name" v-model="washMedium">
+						<small class="text-muted">Wash Medium</small>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" id="cc-number" v-model="washTemperature">
+						<small class="text-muted">Temperature (Fahrenheit F)</small>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>How must the filter residue be discharged?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="residueDischargedSlurry" type="radio" value="As a Slurry" name="howResidueDischarged" v-model="howResidueDischarged">
+							<label class="form-check-label" for="residueDischargedSlurry">As a Slurry (Funda Filter Type A)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="residueDischargedDryCake" type="radio" value="As a Dry Cake" name="howResidueDischarged" v-model="howResidueDischarged">
+							<label class="form-check-label" for="residueDischargedDryCake">As a Dry Cake (Funda Filter Type R)</label>
+						</div>
+					</div>
+				</div>
+
+				<div v-if="howResidueDischarged == 'As a Dry Cake'">
+					<div class="row">
+						<div class="col-md-5 mb-3">
+							<p>How will you dry your cake:</p>
+						</div>
+						<div class="form-check">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="Air" id="howDryAir" v-model="howDryCake">
+								<label class="form-check-label" for="howDryAir">Air</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="Inert Gas" id="howDryInertGas" v-model="howDryCake">
+								<label class="form-check-label" for="howDryInertGas">Inert Gas</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="Steam" id="howDrySteam" v-model="howDryCake">
+								<label class="form-check-label" for="howDrySteam">Steam</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="Vacuum" id="howDryVacuum" v-model="howDryCake">
+								<label class="form-check-label" for="howDryVacuum">Vacuum</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="howDryOther" v-model="howDryCake">
+								<label class="form-check-label" for="howDryOther">Other</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row" v-if="isHowDryCakeOther">
+						<div class="col-12">
+							<div class="form-group">
+								<label>Other:</label>
+								<input class="form-control" v-model="howDryCakeOther">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3 mb-3">
+							<p>At what temperature will you dry the cake?</p>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" placeholder="" v-model="temperatureDryCake">
+							<small class="text-muted">Fahrenheit(F)</small>
+						</div>
+					</div>
+				</div>
+
+
+				<h2 class="text-center">Process History</h2>
+
+
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What type of filter has been used for this purpose up to now?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" type="text" v-model="typeFilterUsedUpToNow">
+					   	<small class="text-muted">Type of Filter</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What size of filter has been used for this purpose up to now?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" v-model="sizeFilterUsedUpToNow">
+						<small class="text-muted">Size of Filter (m<sup>2</sup>)</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What type of screens has been used for this purpose up to now?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" v-model="sizeScreensUsedUpToNow">
+					   	<small class="text-muted">Type of Screens</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Do you precoat your filter?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" name="precoat" v-model="precoat" id="precoatYes" type="radio" value="Yes">
+						   	<label class="form-check-label" for="precoatYes">Yes</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" name="precoat" v-model="precoat" id="precoatNo" type="radio" value="No">
+						   	<label class="form-check-label" for="precoatNo">No</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" name="precoat" v-model="precoat" id="precoatNotSure" type="radio" value="Not Sure">
+						   	<label class="form-check-label" for="precoatNotSure">Not Sure</label>
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What type of precoat do you use?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="D.E." id="precoatTypeDE" v-model="precoatType">
+							<label class="form-check-label" for="precoatTypeDE">D.E.</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="Cellulose" id="precoatTypeCellulose" v-model="precoatType">
+							<label class="form-check-label" for="precoatTypeCellulose">Cellulose</label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="Activated Carbon" id="precoatTypeCarbon" v-model="precoatType">
+							<label class="form-check-label" for="precoatTypeCarbon">Activated Carbon</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="Perlite" id="precoatTypePerlite" v-model="precoatType">
+							<label class="form-check-label" for="precoatTypePerlite">Perlite</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="Other" id="precoatTypeOther" v-model="precoatType">
+							<label class="form-check-label" for="precoatTypeOther">Other</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" v-if="isPrecoatTypeOther">
+					<div class="col-12">
+						<div class="form-group">
+							<label>Other:</label>
+							<input class="form-control" v-model="precoatTypeOther">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Is it necessary to add body feed?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="addBodyFeedYes" type="radio" value="Yes" v-model="addBodyFeed">
+						   	<label class="form-check-label" for="addBodyFeedYes">Yes</label> 
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="addBodyFeedNo" type="radio" value="No" v-model="addBodyFeed">
+						   	<label class="form-check-label" for="addBodyFeedNo">No</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="addBodyFeedNotSure" type="radio" value="Not Sure" v-model="addBodyFeed">
+						   	<label class="form-check-label" for="addBodyFeedNotSure">Not Sure</label>
+						</div>
+					</div>
+				</div><br>
+
+
+				<div class="row" v-if="addBodyFeed == 'Yes'">
+					<div class="col-md-3 mb-3">
+						<p>What is the amount of body feed required?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input type="text" class="form-control" v-model="bodyFeedAmountLbs">
+						<small class="text-muted">Body Feed in pounds(lbs)</small>
+					</div>
+				</div> 
+
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What is the filtration rate in your existing filter, or obtained from tests?</p>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" type="text" v-model="filtrationRateExistingLHrM2">
+					   	<small class="text-muted">liter/hour/m2</small>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" type="text">
+					   	<small class="text-muted">gpm/ft2</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What is the pressure drop in your existing filter at the end of filtration?</p>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" type="text" v-model="pressureDropExistingPsig">
+					   	<small class="text-muted">Psig</small>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" type="text" v-model="pressureDropCakeThicknessInches">
+					   	<small class="text-muted">Cake Thickness (inches)</small>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What maximum cake thickness can you achieve?</p>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" type="text" v-model="maximumCakeThicknessInches">
+					   	<small class="text-muted">Inches</small>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input class="form-control" type="text" v-model="maximumCakeThicknessMM">
+					   	<small class="text-muted">Millimeter (mm)</small>
+					</div>
+				</div>
+
+				<h2 class="text-center">Filter Construction</h2>
+
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>Based on your Knowledge of your product, what materials of construction should be used for the filter?</p>
+					</div>
+					<div class="col-md-8 mb-3">
+						<textarea class="form-control" v-model="materialsConstructionShouldBeUsed" rows="8"></textarea>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What type of filter plates are required?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="typeFilterPlatesRemovable" type="checkbox" value="Removable Filter Screens (With Outer Clamp Ring)" v-model="typeFilterPlates">
+						   	<label class="form-check-label" for="typeFilterPlatesRemovable">Removeable Filter Screens (With Outer Clamp Ring)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeFilterPlatesWelded" type="checkbox" value="Welded Filter Media" v-model="typeFilterPlates">
+						   	<label class="form-check-label" for="typeFilterPlatesWelded">Welded Filter Media</label>
+						</div>
+						<div class="form-check">
+						   	<input class="form-check-input" id="typeFilterPlatesSpacer" type="checkbox" value="Spacer Ring Welded to Bottom of Filter Plate" v-model="typeFilterPlates">
+						   	<label class="form-check-label" for="typeFilterPlatesSpacer">Spacer Ring Welded to Bottom of Filter Plate</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeFilterPlatesNotSure" type="checkbox" value="Not Sure" v-model="typeFilterPlates">
+						   	<label class="form-check-label" for="typeFilterPlatesNotSure">Not Sure, I would like to learn more about Filter Plates</label>
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>Which material is required for your filter screens?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" type="text" v-model="requiredMaterialFilterScreens">
+					   	<small class="text-muted">screen filter material</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>Which micron size is required for your filter screens?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" type="text" v-model="micronSizeFilterScreens">
+					   	<small class="text-muted">screen filter micron size</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What type of filter nest configuration would you prefer?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
+						   	<label class="form-check-label" for="defaultCheck1">Gaskets for Spacer Seal</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
+						   	<label class="form-check-label" for="defaultCheck1">O-Rings for Spacer Seal</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
+						   	<label class="form-check-label" for="defaultCheck1">Cake Scraper (For A Type Filters)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
+						   	<label class="form-check-label" for="defaultCheck1">Cake Breaker (For R Type Filters)</label>
+						</div>
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What gasketing material is required?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" type="text" v-model="gasketingMaterial">
+					   	<small class="text-muted">Enter gasket material</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>What o-ring material is required?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input class="form-control" type="text" v-model="oRingMaterial">
+					   	<small class="text-muted">Enter o-ring material</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What type of upper seal is required?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="typeUpperSealStuffingBox" type="checkbox" value="Stuffing Box" v-model="typeUpperSeal">
+						   	<label class="form-check-label" for="typeUpperSealStuffingBox">Stuffing Box</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeUpperSealLipSeal" type="checkbox" value="Lip Seal" v-model="typeUpperSeal">
+						   	<label class="form-check-label" for="typeUpperSealLipSeal">Lip Seal</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeUpperSealMechanicalSeal" type="checkbox" value="Mechanical Seal" v-model="typeUpperSeal">
+						   	<label class="form-check-label" for="typeUpperSealMechanicalSeal">Mechanical Seal</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeUpperSealStandStill" type="checkbox" value="Stand Still Seal combined with Mechanical Seal" v-model="typeUpperSeal">
+						   	<label class="form-check-label" for="typeUpperSealStandStill">Stand Still Seal combined with Mechanical Seal</label> <!-- IF YOU CLICK STAND STILL SEAL YOU GET THIS DROP DOWN -->
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeUpperSealWithFlushing" type="checkbox" value="With Flushing" v-model="typeUpperSeal">
+						   	<label class="form-check-label" for="typeUpperSealWithFlushing">With Flushing</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeUpperSealWithCooling" type="checkbox" value="With Cooling" v-model="typeUpperSeal">
+						   	<label class="form-check-label" for="typeUpperSealWithCooling">With Cooling</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeUpperSealOther" type="checkbox" value="Other" v-model="typeUpperSeal">
+						   	<label class="form-check-label" for="typeUpperSealOther">Other</label> <!-- IF YOU CLICK OTHER YOU GET THIS DROP DOWN -->
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeUpperSealNotSure" type="checkbox" value="Not Sure" v-model="typeUpperSeal">
+						   	<label class="form-check-label" for="typeUpperSealNotSure">Not Sure, I would like to learn more</label> <!-- IF YOU CLICK NOT SURE YOU GET THIS DROP DOWN -->
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row" v-if="isUpperLipSealOther">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Other</label>
+							<input class="form-control" v-model="typeUpperLipSealOther">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row" v-if="isUpperLipSealMechanicalOrStandStill">
+					<div class="col-md-5 mb-3">
+						<p>Would you require a seal pot?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" value="Yes" id="requireUpperLipSealPotYes" name="requireUpperLipSealPot" v-model="requireUpperLipSealPot">
+							<label class="form-check-label" for="requireUpperLipSealPotYes">
+								Yes
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" value="No" id="requireUpperLipSealPotNo" name="requireUpperLipSealPot" v-model="requireUpperLipSealPot">
+							<label class="form-check-label" for="requireUpperLipSealPotNo">
+								No
+							</label>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What type of lower bearing/seal is required?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="typeLowerBearingSealStuffing" type="checkbox" value="Stuffing Box with Lip Seals" v-model="typeLowerBearingSeal">
+						   	<label class="form-check-label" for="dtypeLowerBearingSealStuffing">Stuffing Box with Lip Seals</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeLowerBearingSealMechanicalSeal" type="checkbox" value="Mechanical Seal (For A Type, Slurry Discharge)" v-model="typeLowerBearingSeal">
+						   	<label class="form-check-label" for="typeLowerBearingSealMechanicalSeal">Mechanical Seal (For A Type, Slurry Discharge)</label> 
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeLowerBearingSealStandard" type="checkbox" value="Standard Lower Bearing (For R Type, Dry Discharge)" v-model="typeLowerBearingSeal">
+						   	<label class="form-check-label" for="typeLowerBearingSealStandard">Standard Lower Bearing (For R Type, Dry Discharge)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeLowerBearingSealBellows" type="checkbox" value="Bellows Seal (For R Type, Dry Discharge)" v-model="typeLowerBearingSeal">
+						   	<label class="form-check-label" for="typeLowerBearingSealBellows">Bellows Seal (For R Type, Dry Discharge)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeLowerBearingSealStandStill" type="checkbox" value="Stand Still Seal (For R Type, Dry Discharge)" v-model="typeLowerBearingSeal">
+						   	<label class="form-check-label" for="typeLowerBearingSealStandStill">Stand Still Seal (For R Type, Dry Discharge)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeLowerBearingSealWithFlushing" type="checkbox" value="With Flushing" v-model="typeLowerBearingSeal">
+						   	<label class="form-check-label" for="typeLowerBearingSealWithFlushing">With Flushing</label>
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row" v-if="typeLowerBearingSeal.indexOf('Mechanical Seal (For A Type, Slurry Discharge)') >= 0">
+					<div class="col-md-5 mb-3">
+						<p>Would you require a seal pot?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" value="Yes" id="requireLowerBearingSealPotYes" name="requireLowerBearingSealPot" v-model="requireLowerBearingSealPot">
+							<label class="form-check-label" for="requireLowerBearingSealPotYes">
+								Yes
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" value="No" id="requireLowerBearingSealPotNo" name="requireLowerBearingSealPot" v-model="requireLowerBearingSealPot">
+							<label class="form-check-label" for="requireLowerBearingSealPotNo">
+								No
+							</label>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What type of Funda drive would you need?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="typeFundaDriveVerticalElectric" type="checkbox" value="Vertical Electric Drive with Gearbox" v-model="typeFundaDrive">
+						   	<label class="form-check-label" for="typeFundaDriveVerticalElectric">Vertical Electric Drive with Gearbox</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeFundaDriveVerticalHydraulic" type="checkbox" value="Vertical Hydraulic Drive" v-model="typeFundaDrive">
+						   	<label class="form-check-label" for="typeFundaDriveVerticalHydraulic">Vertical Hydraulic Drive</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeFundaDriveSideMounted" type="checkbox" value="Side Mounted Electric Drive with Gearbox" v-model="typeFundaDrive">
+						   	<label class="form-check-label" for="typeFundaDriveSideMounted">Side Mounted Electric Drive with Gearbox</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeFundaDriveNotSure" type="checkbox" value="Not Sure" v-model="typeFundaDrive">
+						   	<label class="form-check-label" for="typeFundaDriveNotSure">Not sure, I would like to learn more</label> 
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Is a jacket required?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="jacketRequiredConventional" type="checkbox" value="Conventional Jacket (Double Wall)" v-model="jacketRequired">
+						   	<label class="form-check-label" for="jacketRequiredConventional">Conventional Jacket (Double Wall)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="jacketRequiredHalfPipe" type="checkbox" value="Half Pipe Design" v-model="jacketRequired">
+						   	<label class="form-check-label" for="jacketRequiredHalfPipe">Half Pipe Design</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="jacketRequiredDimpledDesign" type="checkbox" value="Dimpled Design" v-model="jacketRequired">
+						   	<label class="form-check-label" for="jacketRequiredDimpledDesign">Dimpled Design</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="jacketRequiredOther" type="checkbox" value="Other" v-model="jacketRequired">
+						   	<label class="form-check-label" for="jacketRequiredOther">Other</label>
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row" v-if="jacketRequired.indexOf('Other') >= 0">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Other</label>
+							<input class="form-control" v-model="jacketRequiredOther">
+						</div>
+					</div>
+				</div>
+
+				<div class="row" v-if="jacketRequired.indexOf('Conventional Jacket (Double Wall)') >= 0 || jacketRequired.indexOf('Half Pipe Design') >= 0 || jacketRequired.indexOf('Dimpled Design') >= 0">
+					<div class="col-md-3 mb-3">
+						<p>What is the design pressure and design temperature of the jacket?</p>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" v-model="jacketDesignPressurePsig">
+						<small class="text-muted">Pressure (psig)</small>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" v-model="jacketDesignTemperatureF">
+						<small class="text-muted">Temperature (Fahrenheit F)</small>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Is insulation with a welded sheathing required?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="isInsulationWeldedSheatingYes" type="radio" value="Yes" name="isInsulationWeldedSheathingRequired" v-model="isInsulationWeldedSheathingRequired">
+						   	<label class="form-check-label" for="isInsulationWeldedSheatingYes">Yes</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="isInsulationWeldedSheatingNo" type="radio" value="No" name="isInsulationWeldedSheathingRequired" v-model="isInsulationWeldedSheathingRequired">
+						   	<label class="form-check-label" for="isInsulationWeldedSheatingNo">No</label>
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What is your interior finish of the vessel?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="vesselInteriorFinishMillFinish" type="checkbox" value="Mill Finish" v-model="vesselInteriorFinish">
+						   	<label class="form-check-label" for="vesselInteriorFinishMillFinish">Mill Finish</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="vesselInteriorFinishMechanical" type="checkbox" value="Mechanical Polished" v-model="vesselInteriorFinish">
+						   	<label class="form-check-label" for="vesselInteriorFinishMechanical">Mechanical Polished</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="vesselInteriorFinishElectro" type="checkbox" value="Electro Polished" v-model="vesselInteriorFinish">
+						   	<label class="form-check-label" for="vesselInteriorFinishElectro">Electro Polished</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="vesselInteriorFinishOther" type="checkbox" value="Other" v-model="vesselInteriorFinish">
+						   	<label class="form-check-label" for="vesselInteriorFinishOther">Other</label>
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row" v-if="vesselInteriorFinish.indexOf('Other') >= 0">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Other</label>
+							<input class="form-control" v-model="vesselInteriorFinishOther">
+						</div>
+					</div>
+				</div>
+
+				<div class="row" v-if="vesselInteriorFinish.indexOf('Mechanical Polished') >= 0 || vesselInteriorFinish.indexOf('Electro Polished') >= 0">
+					<div class="col-md-3 mb-3">
+						<p>What is the RA finish?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input type="text" class="form-control" v-model="raFinish">
+						<small class="text-muted">RA Finish</small>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What is your exterior finish of the vessel?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="vesselExteriorFinishMill" type="checkbox" value="Mill Finish" v-model="vesselExteriorFinish">
+						   	<label class="form-check-label" for="vesselExteriorFinishMill">Mill Finish</label> 
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="vesselExteriorFinishMechanical" type="checkbox" value="Mechanical Polished" v-model="vesselExteriorFinish">
+						   	<label class="form-check-label" for="vesselExteriorFinishMechanical">Mechanical Polished</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="vesselExteriorFinishPainted" type="checkbox" value="Painted" v-model="vesselExteriorFinish">
+						   	<label class="form-check-label" for="vesselExteriorFinishPainted">Painted</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="vesselExteriorFinishGlassBead" type="checkbox" value="Glass Bead Blasted" v-model="vesselExteriorFinish">
+						   	<label class="form-check-label" for="vesselExteriorFinishGlassBead">Glass Bead Blasted</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="vesselExteriorFinishOther" type="checkbox" value="Other" v-model="vesselExteriorFinish">
+						   	<label class="form-check-label" for="vesselExteriorFinishOther">Other</label> 
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row" v-if="vesselExteriorFinish.indexOf('Other') >= 0">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Other</label>
+							<input class="form-control" v-model="vesselExteriorFinishOther">
+						</div>
+					</div>
+				</div>
+
+				<div class="row" v-if="vesselExteriorFinish.indexOf('Mill Finish') >= 0">
+					<div class="col-md-3 mb-3">
+						<p>What is the RA finish?</p>
+					</div>
+					<div class="col-md-6 mb-3">
+						<input type="text" class="form-control" v-model="raFinish">
+						<small class="text-muted">RA Finish</small>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What type of body flange clamping type would you prefer?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="typeBodyFlangeClampingStandard" type="checkbox" value="Standard Studs, Nuts and Washers" v-model="typeBodyFlangeClamping">
+						   	<label class="form-check-label" for="typeBodyFlangeClampingStandard">Standard Studs, Nuts and Washers</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeBodyFlangeClampingSwing" type="checkbox" value="Swing Bolts, Nuts and Washers" v-model="typeBodyFlangeClamping">
+						   	<label class="form-check-label" for="typeBodyFlangeClampingSwing">Swing Bolts, Nuts and Washers</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeBodyFlangeClampingCClamps" type="checkbox" value="C-Clamps" v-model="typeBodyFlangeClamping">
+						   	<label class="form-check-label" for="typeBodyFlangeClampingCClamps">C-Clamps</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeBodyFlangeClampingOther" type="checkbox" value="Other" v-model="typeBodyFlangeClamping">
+						   	<label class="form-check-label" for="typeBodyFlangeClampingOther">Other</label> <!-- if you click this, you get a box that appears here -->
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row" v-if="typeBodyFlangeClamping.indexOf('Other') >= 0">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Other</label>
+							<input class="form-control" v-model="typeBodyFlangeClampingOther">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>What type of cake discharge valve would you require?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="typeCakeDischargeValveFabriKnife" type="checkbox" value="Fabri Knife Gate Valve" v-model="typeCakeDischargeValve">
+						   	<label class="form-check-label" for="typeCakeDischargeValveFabriKnife">Fabri Knife Gate Valve</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeCakeDischargeValvePosiFlate" type="checkbox" value="Posi-Flate Valve" v-model="typeCakeDischargeValve">
+						   	<label class="form-check-label" for="typeCakeDischargeValvePosiFlate">Posi-Flate Valve</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeCakeDischargeValveButterfly" type="checkbox" value="Butterfly Valve" v-model="typeCakeDischargeValve">
+						   	<label class="form-check-label" for="typeCakeDischargeValveButterfly">Butterfly Valve</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeCakeDischargeValveDoubleButterfuly" type="checkbox" value="Double Butterfly Valve with Flushing Spool" v-model="typeCakeDischargeValve">
+						   	<label class="form-check-label" for="typeCakeDischargeValveDoubleButterfuly">Double Butterfly Valve with Flushing Spool</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeCakeDischargeValveSteriQuick" type="checkbox" value="Steri Quick Closure" v-model="typeCakeDischargeValve">
+						   	<label class="form-check-label" for="typeCakeDischargeValveSteriQuick">Steri Quick Closure</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeCakeDischargeValveOther" type="checkbox" value="Other" v-model="typeCakeDischargeValve">
+						   	<label class="form-check-label" for="typeCakeDischargeValveOther">Other</label> <!-- if you click this, you get a box that appears here -->
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="typeCakeDischargeValveNotSure" type="checkbox" value="Not Sure" v-model="typeCakeDischargeValve">
+						   	<label class="form-check-label" for="typeCakeDischargeValveNotSure">Not Sure, I would like to learn more</label> <!-- if you click this, you get a box that appears here with an image -->
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row" v-if="typeCakeDischargeValve.indexOf('Other') >= 0">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Other</label>
+							<input class="form-control" v-model="typeCakeDischargeValveOther">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Do you want us to supply you with a control system?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="wantSupplyWithControlSystemSkidMounted" type="checkbox" value="Skid Mounted Plate" v-model="wantSupplyWithControlSystem">
+						   	<label class="form-check-label" for="wantSupplyWithControlSystemSkidMounted">Skid Mounted Plate</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="wantSupplyWithControlSystemLocalControl" type="checkbox" value="Local Control Panel" v-model="wantSupplyWithControlSystem">
+						   	<label class="form-check-label" for="wantSupplyWithControlSystemLocalControl">Local Control Panel</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="wantSupplyWithControlSystemPreWired" type="checkbox" value="Pre-Wired to Junction Box(DCS Ready)" v-model="wantSupplyWithControlSystem">
+						   	<label class="form-check-label" for="wantSupplyWithControlSystemPreWired">Pre-Wired to Junction Box(DCS Ready)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="wantSupplyWithControlSystemNotSure" type="checkbox" value="Not Sure, I would like to learn more" v-model="wantSupplyWithControlSystem">
+						   	<label class="form-check-label" for="wantSupplyWithControlSystemNotSure">Not Sure, I would like to learn more</label> <!-- if you click this, you get a box that appears here with an image -->
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Do you require Clean-In-Place for your Funda filter?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="requireCleanInPlaceFilterPlate" type="checkbox" value="Filter Plate and Screen Washing (Spray Bars)" v-model="requireCleanInPlace">
+						   	<label class="form-check-label" for="requireCleanInPlaceFilterPlate">Filter Plate and Screen Washing (Spray Bars)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="requireCleanInPlaceVesselInterior" type="checkbox" value="Vessel Interior Washing (Spray Balls)" v-model="requireCleanInPlace">
+						   	<label class="form-check-label" for="requireCleanInPlaceVesselInterior">Vessel Interior Washing (Spray Balls)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="requireCleanInPlace100Cip" type="checkbox" value="100% CIP Coverage (Spray Bars &amp; Spray Balls)" v-model="requireCleanInPlace">
+						   	<label class="form-check-label" for="requireCleanInPlace100Cip">100% CIP Coverage (Spray Bars &amp; Spray Balls)</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="requireCleanInPlaceNotSure" type="checkbox" value="Not Sure" v-model="requireCleanInPlace">
+						   	<label class="form-check-label" for="requireCleanInPlaceNotSure">Not Sure, I would like to learn more</label> <!-- if you click this, you get a box that appears here with an image-->
+						</div>
+					</div>
+				</div><br>
+
+				<div class="row">
+					<div class="col-md-5 mb-3">
+						<p>Are you interested in renting a Funda Filter?</p>
+					</div>
+					<div class="form-check">
+						<div class="form-check">
+							<input class="form-check-input" id="interestedRentingFilterYes" type="radio" value="Yes" name="interestedRentingFilter" v-model="interestedRentingFilter">
+						   	<label class="form-check-label" for="interestedRentingFilterYes">Yes</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="interestedRentingFilterNo" type="radio" value="No" name="interestedRentingFilter" v-model="interestedRentingFilter">
+						   	<label class="form-check-label" for="interestedRentingFilterNo">No</label>
+						</div>
+					</div>
+				</div><br>
+
+				<div v-if="interestedRentingFilter == 'Yes'">
+					<div class="row">
+						<div class="col-md-5 mb-3">
+							<p>Are you sure what type of filter is best for your process?</p>
+						</div>
+						<div class="form-check">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" value="Yes" id="sureTypeFilterYes" name="sureTypeFilter" v-model="sureTypeFilter">
+								<label class="form-check-label" for="sureTypeFilterYes">Yes</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" value="No" id="sureTypeFilterNo" name="sureTypeFilter" v-model="sureTypeFilter">
+								<label class="form-check-label" for="sureTypeFilterNo">No</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-5 mb-3">
+							<p>Which rental unit would you like to use?</p>
+						</div>
+						<div class="form-check">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="0.06m2 Skid Mounted, Fully Piped with Pump and Holding Tank" id="rentalUnit006" v-model="rentalUnit">
+								<label class="form-check-label" for="rentalUnit006">0.06m<sup>2</sup> Skid Mounted, Fully Piped with Pump and Holding Tank</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="0.25m2 Skid Mounted, Fully Piped with Pump and Holding Tank" id="rentalUnit025" v-model="rentalUnit">
+								<label class="form-check-label" for="rentalUnit025">0.25m<sup>2</sup> Skid Mounted, Fully Piped with Pump and Holding Tank</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="5m2 Stand Alone" id="rentalUnit5m" v-model="rentalUnit">
+								<label class="form-check-label" for="rentalUnit5m">5m<sup>2</sup> Stand Alone</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3 mb-3">
+							<p>For how many weeks would you like to rent a Funda filter?</p>
+						</div>
+						<div class="col-md-6 mb-3">
+							<input type="text" class="form-control" v-model="rentalWeeks">
+							<small class="text-muted">Rental Weeks</small>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-5 mb-3">
+							<p>Will you need installation process or operation support?</p>
+						</div>
+						<div class="form-check">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" value="Yes" id="installationOperationSupportYes" name="installationOperationSupport" v-model="installationOperationSupport">
+								<label class="form-check-label" for="installationOperationSupportYes">Yes</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" value="No" id="installationOperationSupportNo" name="installationOperationSupport" v-model="installationOperationSupport">
+								<label class="form-check-label" for="installationOperationSupportNo">No</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-5 mb-3">
+							<p>Where would you like to perform these tests?</p>
+						</div>
+						<div class="form-check">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" value="Steri's Facility" id="whereTestsSteri" name="whereTests" v-model="whereTests">
+								<label class="form-check-label" for="whereTestsSteri">Steri's Facility</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" value="Your Site" id="whereTestsYourSite" name="whereTests" v-model="whereTests">
+								<label class="form-check-label" for="whereTestsYourSite">Your Site</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<p>Additional comments and application data</p>
+					</div>
+					<div class="col-md-8 mb-3">
+						<textarea class="form-control" rows="8" v-model="additionalComments"></textarea>
+					</div>
+				</div><br>
+				<button class="btn btn-primary btn-lg btn-block" type="submit" v-on:click.prevent="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+	<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">&copy; 2019 Steri Technologies</p>
+		<ul class="list-inline">
+			<li class="list-inline-item">
+			<a href="#">Privacy</a>
+			</li>
+			<li class="list-inline-item">
+			<a href="#">Terms</a>
+			</li>
+			<li class="list-inline-item">
+			<a href="#">Support</a>
+			</li>
+		</ul>
+	</footer>
+</div><!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.js"></script>
+
+<script>
+jQuery(function($) {
+
+	new Vue({
+		el: '#form',
+		data: {
+			date: '',
+			companyName: '',
+			firstName: '',
+			lastName: '',
+			title: '',
+			address: '',
+			address2: '',
+			country: '',
+			state: '',
+			zip: '',
+			phoneAreaCode: '',
+			phoneNumber: '',
+			faxAreaCode: '',
+			faxNumber: '',
+			email: '',
+			solidsVolumePercent: '',
+			solidsPpm: '',
+			solidsWeight: '',
+			solidsBulkDensityWetKgM3: '',
+			solidsBulkDensityDryKgM3: '',
+			liquidPhraseDescription: '',
+			liquidType: [],
+			liquidAcidOrBaseDescription: '',
+			liquidPhLevel: '',
+			liquidOther: '',
+			liquidSpecificGravity: '',
+			liquidViscosityFiltrationCps: '',
+			liquidViscosityFiltrationDegreesF: '',
+			liquidViscosityRoomTemperatureCps: '',
+			liquidViscosityRoomTemperatureDegreesF: '',
+			solidsToBeRemovedDescription: '',
+			solidsWhenWet: [],
+			solidsWhenDry: [],
+			solidsWhenWashed: [],
+			particleSizeAverageMicron: '',
+			particleSizeMinimumMicron: '',
+			particleSizeMaximumMicron: '',
+			solidsSedimentationSpeedSlurry: '',
+			processType: [],
+			processTypeContinuousGPM: '',
+			processTypeContinuousM3Hr: '',
+			processTypeBatchSizeGallons: '',
+			processTypeBatchNumber24Hours: '',
+			processTypeBatchFiltrationTimeHrs: '',
+			processTypeBatchBatchTimeHrs: '',
+			filtrationPurpose: [],
+			filterTempC: '',
+			filterTempF: '',
+			washResidue: [],
+			washMedium: '',
+			washTemperature: '',
+			howResidueDischarged: [],
+			howDryCake: [],
+			howDryCakeOther: '',
+			temperatureDryCake: '',
+			typeFilterUsedUpToNow: '',
+			sizeFilterUsedUpToNow: '',
+			sizeScreensUsedUpToNow: '',
+			precoat: [],
+			precoatType: [],
+			precoatTypeOther: '',
+			addBodyFeed: [],
+			bodyFeedAmountLbs: '',
+			filtrationRateExistingLHrM2: '',
+			pressureDropExistingPsig: '',
+			pressureDropCakeThicknessInches: '',
+			maximumCakeThicknessInches: '',
+			maximumCakeThicknessMM: '',
+			materialsConstructionShouldBeUsed: '',
+			typeFilterPlates: [],
+			requiredMaterialFilterScreens: '',
+			micronSizeFilterScreens: '',
+			gasketingMaterial: '',
+			oRingMaterial: '',
+			typeUpperSeal: [],
+			typeUpperLipSealOther: '',
+			requireUpperLipSealPot: [],
+			typeLowerBearingSeal: [],
+			requireLowerBearingSealPot: [],
+			typeFundaDrive: [],
+			jacketRequired: [],
+			jacketRequiredOther: '',
+			jacketDesignPressurePsig: '',
+			jacketDesignTemperatureF: '',
+			isInsulationWeldedSheathingRequired: [],
+			vesselInteriorFinish: [],
+			vesselInteriorFinishOther: '',
+			raFinish: '',
+			vesselExteriorFinish: [],
+			vesselExteriorFinishOther: '',
+			raFinish: '',
+			typeBodyFlangeClamping: [],
+			typeBodyFlangeClampingOther: '',
+			typeCakeDischargeValve: [],
+			typeCakeDischargeValveOther: '',
+			wantSupplyWithControlSystem: [],
+			requireCleanInPlace: [],
+			interestedRentingFilter: [],
+			sureTypeFilter: [],
+			rentalUnit: [],
+			rentalWeeks: '',
+			installationOperationSupport: [],
+			whereTests: [],
+			additionalComments: '',
+		},
+
+		computed: {
+			isLiquidAcidicOrBasic: function() { return this.liquidType.indexOf('Acidic') >= 0 || this.liquidType.indexOf('Basic') >= 0; },
+			isLiquidPh: function() { return this.liquidType.indexOf('pH') >= 0; },
+			isLiquidOther: function() { return this.liquidType.indexOf('Other') >= 0; },
+
+			isPrecoatTypeOther: function() { return this.precoatType.indexOf('Other') >= 0; },
+			isUpperLipSealOther: function() { return this.typeUpperSeal.indexOf('Other') >= 0; },
+			isUpperLipSealMechanicalOrStandStill: function() { return this.typeUpperSeal.indexOf('Mechanical Seal') >= 0 || this.typeUpperSeal.indexOf('Stand Still Seal combined with Mechanical Seal') >= 0; },
+		},
+
+		methods: {
+			submit: function() {
+				var vm = this;
+
+				$.post('submit.php', vm.$data, function() {
+					alert("Submitted");
+				});
+			},
+		},
+	});
+
+		$('[v-model]').each(function() {
+				var elem = $(this);
+				console.log(elem.attr('v-model'));
+		});
+
+
+
+});
+</script>
+
+</body>
+</html>

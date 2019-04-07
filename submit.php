@@ -70,39 +70,7 @@ $fields = array (
 
 
  
- //Gets post data, converts json array of objects to php Big Array of arrays
- /*
-$BigArray = json_decode($_POST["mydata"], true);
-file_put_contents("log.txt", print_r($BigArray, true));
-
-/*
-foreach($BigArray as &$smallArray) {
-    $valueToSearch = $smallArray["name"];
-    if (isset($fields[$valueToSearch])) {
-      $smallArray["name"] = $fields[$valueToSearch];
-    }
-  
-}
-*/
-
-
-
-/*
-    file_put_contents("log.txt", print_r($smallArray["name"], true), FILE_APPEND);
-    file_put_contents("log.txt", print_r("\n\n", true), FILE_APPEND);
-    file_put_contents("log.txt", print_r($smallArray["value"], true), FILE_APPEND);
-    file_put_contents("log.txt", print_r("\n\n", true), FILE_APPEND);
-  */
-
-
-/*
- foreach($_POST as $object) {
-  file_put_contents("log.txt", $object);
- }
-*/
- 
-
-file_put_contents("log.txt", print_r($_POST, true));
+//file_put_contents("log.txt", print_r($_POST, true));
 
 
 $body = '';

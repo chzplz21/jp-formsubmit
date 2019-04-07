@@ -31,7 +31,7 @@
 					<label for="companyName">Company Name</label>
 					<div class="input-group">
 						<div class="input-group-prepend"></div>
-						<input data-measurementName = "kilowatts" class="form-control" id="companyName" v-model="companyName" placeholder="Company name" required="" type="text">
+						<input  class="form-control" id="companyName" v-model="companyName" placeholder="Company name" required="" type="text">
 						<div class="invalid-feedback" style="width: 100%;"> Your Company name is required.  </div>
 					</div>
 				</div>
@@ -858,21 +858,21 @@
 					<div class="col-md-4">
 						<div class="form-group">
 						<label>Enter<br>Volume</label>
-					   	<input class="form-control" v-model="solidsVolumePercent" placeholder="" type="text">
+					   	<input data-measurementName = "%" name = "solidsVolumePercent" class="form-control"  v-model="solidsVolumePercent" placeholder="" type="text">
 					   	<small class="text-muted">By Volume (%)</small>
 					</div>
 					</div>
 					<div class="col-md-4">
 						<div class="form-group">
 						<label>Enter<br>PPM</label>
-					   	<input class="form-control" v-model="solidsPpm" type="text">
+					   	<input class="form-control" data-measurementName = "ppm %" name = "solidsPpm" v-model="solidsPpm" type="text">
 					   	<small class="text-muted">By ppm (%)</small>
 					</div>
 					</div>
 					<div class="col-md-4">
 						<div class="form-group">
 						<label for="cc-number">Enter<br>Weight</label>
-					   	<input class="form-control" id="cc-number" v-model="solidsWeight" placeholder="" type="text">
+					   	<input class="form-control" data-measurementName = "%" name = "solidsWeight" id="cc-number" v-model="solidsWeight" placeholder="" type="text">
 					   	<small class="text-muted">By Weight (%)</small>
 					</div>
 					</div>
@@ -983,11 +983,11 @@
 						<p>What is its viscosity at filtration temperature?</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" v-model="liquidViscosityFiltrationCps">
+						<input class="form-control" data-measurementName="cps" name = "liquidViscosityFiltrationCps" v-model="liquidViscosityFiltrationCps">
 					   	<small class="text-muted">cps</small>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" v-model="liquidViscosityFiltrationDegreesF">
+						<input class="form-control" data-measurementName="Degrees F" name = "liquidViscosityFiltrationDegreesF" v-model="liquidViscosityFiltrationDegreesF">
 					   	<small class="text-muted">Degrees F</small>
 					</div>
 				</div>
@@ -996,11 +996,11 @@
 						<p>What is its viscosity at room temperature?</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" v-model="liquidViscosityRoomTemperatureCps">
+						<input class="form-control" data-measurementName="cps" name = "liquidViscosityRoomTemperatureCps" v-model="liquidViscosityRoomTemperatureCps">
 					   	<small class="text-muted">cps</small>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" v-model="liquidViscosityRoomTemperatureDegreesF">
+						<input class="form-control"  data-measurementName="Degrees F" name = "liquidViscosityRoomTemperatureDegreesF" v-model="liquidViscosityRoomTemperatureDegreesF">
 					   	<small class="text-muted">Degrees F</small>
 					</div>
 				</div>
@@ -1067,13 +1067,13 @@
 						<p>What is the particle size in micron?</p>
 					</div>
 					<div class="col-md-3 mb-3">
-						<input class="form-control" v-model="particleSizeAverageMicron" type="text"> <small class="text-muted">Average (micron)</small>
+						<input class="form-control" data-measurementName="Average (micron)" name = "particleSizeAverageMicron" v-model="particleSizeAverageMicron" type="text"> <small class="text-muted">Average (micron)</small>
 					</div>
 					<div class="col-md-3 mb-3">
-						<input class="form-control" v-model="particleSizeMinimumMicron" type="text"> <small class="text-muted">Minimum (micron)</small>
+						<input class="form-control" data-measurementName="Minimum (micron)" name = "particleSizeMinimumMicron" v-model="particleSizeMinimumMicron" type="text"> <small class="text-muted">Minimum (micron)</small>
 					</div>
 					<div class="col-md-3 mb-3">
-						<input class="form-control" v-model="particleSizeMaximumMicron" type="text"> <small class="text-muted">Maximum (micron)</small>
+						<input class="form-control" data-measurementName="Maximum (micron)" name = "particleSizeMaximumMicron" v-model="particleSizeMaximumMicron" type="text"> <small class="text-muted">Maximum (micron)</small>
 					</div>
 				</div>
 				<div class="row">
@@ -1081,7 +1081,7 @@
 						<p>What is the sedimentation speed of the solids in the slurry?</p>
 					</div>
 					<div class="col-md-6 mb-3">
-						<input class="form-control" v-model="solidsSedimentationSpeedSlurry" type="text"> <small class="text-muted">(ft/hr)</small>
+						<input class="form-control" data-measurementName="ft/hr"  name = "solidsSedimentationSpeedSlurry" v-model="solidsSedimentationSpeedSlurry" type="text"> <small class="text-muted">(ft/hr)</small>
 					</div>
 				</div><!-- SPECIAL PART -->
 
@@ -1093,11 +1093,11 @@
 					</div>
 
 					<div class="form-check">
-						<input class="form-check-input" id="processTypeContinuous" type="radio" name="processType" v-model="processType" value="Continuous">
+						<input class="form-check-input" id="processTypeContinuous" type="radio"  name="processType" v-model="processType" value="Continuous">
 						<label class="form-check-label" for="processTypeContinuous">Continuous</label> 
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" id="processTypeBatch" type="radio" name="processType" v-model="processType" value="Batch">
+						<input class="form-check-input" id="processTypeBatch" type="radio"  name="processType" v-model="processType" value="Batch">
 						<label class="form-check-label" for="processTypeBatch">Batch</label> 
 					</div>
 					<div class="form-check">
@@ -1110,11 +1110,11 @@
 							<p>What is the flow rate of your continuous process?</p>
 						</div>
 						<div class="col-md-4 mb-3">
-							<input type="text" class="form-control" id="cc-name" placeholder="" v-model="processTypeContinuousGPM">
+							<input type="text" class="form-control" id="cc-name" placeholder="" data-measurementName="GPM" name = "processTypeContinuousGPM" v-model="processTypeContinuousGPM">
 							<small>GPM</small>
 						</div>
 						<div class="col-md-4 mb-3">
-							<input type="text" class="form-control" id="cc-number" placeholder="" v-model="processTypeContinuousM3Hr">
+							<input type="text" class="form-control" id="cc-number" placeholder="" data-measurementName="m3/hr" name = "processTypeContinuousM3Hr" v-model="processTypeContinuousM3Hr">
 							<small class="text-muted">m<sup>3</sup>/hr</small>
 						</div>
 					</div>
@@ -1127,7 +1127,7 @@
 
 							<div class="col-md-6 mb-3">
 								<label for="cc-name">Enter <br> Volume</label> 
-								<input type="text" class="form-control" id="cc-name" placeholder="" v-model="processTypeBatchSizeGallons">
+								<input type="text" class="form-control" id="cc-name" placeholder="" data-measurementName="Gallons" name = "processTypeBatchSizeGallons" v-model="processTypeBatchSizeGallons">
 								<small class="text-muted">Batch size in Gallons</small>
 							</div>
 
@@ -1139,7 +1139,7 @@
 
 							<div class="col-md-6 mb-3">
 								<label>Enter <br> Volume</label> 
-								<input type="text" class="form-control" v-model="processTypeBatchNumber24Hours">
+								<input type="text" class="form-control" data-measurementName="Number of batches in 24 hours" name = "processTypeBatchNumber24Hours" v-model="processTypeBatchNumber24Hours">
 								<small class="text-muted">Number of batches in 24 hours.</small>
 							</div>
 						</div>
@@ -1150,13 +1150,13 @@
 
 							<div class="col-md-4 mb-3">
 								<label>Enter cps</label>
-								<input type="text" class="form-control" v-model="processTypeBatchFiltrationTimeHrs">
+								<input type="text" class="form-control" data-measurementName="Filtration Time (hr)" name = "processTypeBatchFiltrationTimeHrs" v-model="processTypeBatchFiltrationTimeHrs">
 								<small class="text-muted">Filtration time (hr)</small>
 							</div>
 
 							<div class="col-md-4 mb-3">
 								<label>Enter Degrees F</label>
-								<input type="text" class="form-control" v-model="processTypeBatchBatchTimeHrs">
+								<input type="text" class="form-control" data-measurementName="Batch Time (hr)" name = "processTypeBatchBatchTimeHrs" v-model="processTypeBatchBatchTimeHrs">
 								<small class="text-muted">Batch Time (hr)</small>
 							</div>
 						</div>
@@ -1187,11 +1187,11 @@
 						<p>At what temperature do you wish to filter</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" placeholder="" v-model="filterTempC" type="text">
+						<input class="form-control" placeholder="" data-measurementName="Degrees Celcius" name = "filterTempC"  v-model="filterTempC" type="text">
 						<small class="text-muted">Celsius (C)</small>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" placeholder="" v-model="filterTempF" type="text">
+						<input class="form-control" placeholder="" data-measurementName="Degrees Fahrenheit" name = "filterTempF" v-model="filterTempF" type="text">
 					   	<small class="text-muted">Fahrenheit (F)</small>
 					</div>
 				</div>
@@ -1217,11 +1217,11 @@
 						<p>What is the wash medium and temperature?</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input type="text" class="form-control" id="cc-name" v-model="washMedium">
+						<input type="text" class="form-control" data-measurementName="Wash Medium" name = "washMedium" id="cc-name" v-model="washMedium">
 						<small class="text-muted">Wash Medium</small>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input type="text" class="form-control" id="cc-number" v-model="washTemperature">
+						<input type="text" class="form-control" id="cc-number" data-measurementName="Degrees Fahrenheit" name = "washTemperature" v-model="washTemperature">
 						<small class="text-muted">Temperature (Fahrenheit F)</small>
 					</div>
 				</div>
@@ -1285,7 +1285,7 @@
 							<p>At what temperature will you dry the cake?</p>
 						</div>
 						<div class="col-md-4 mb-3">
-							<input type="text" class="form-control" placeholder="" v-model="temperatureDryCake">
+							<input type="text" class="form-control" placeholder="" data-measurementName="Degrees Fahrenheit" name = "temperatureDryCake"  v-model="temperatureDryCake">
 							<small class="text-muted">Fahrenheit(F)</small>
 						</div>
 					</div>
@@ -1309,7 +1309,7 @@
 						<p>What size of filter has been used for this purpose up to now?</p>
 					</div>
 					<div class="col-md-6 mb-3">
-						<input class="form-control" v-model="sizeFilterUsedUpToNow">
+						<input class="form-control" data-measurementName="m squared" name = "sizeFilterUsedUpToNow" v-model="sizeFilterUsedUpToNow">
 						<small class="text-muted">Size of Filter (m<sup>2</sup>)</small>
 					</div>
 				</div>
@@ -1417,7 +1417,7 @@
 						<p>What is the filtration rate in your existing filter, or obtained from tests?</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" type="text" v-model="filtrationRateExistingLHrM2">
+						<input class="form-control" type="text" data-measurementName="liter/hour/m2" name="filtrationRateExistingLHrM2" v-model="filtrationRateExistingLHrM2">
 					   	<small class="text-muted">liter/hour/m2</small>
 					</div>
 					<div class="col-md-4 mb-3">
@@ -1430,11 +1430,11 @@
 						<p>What is the pressure drop in your existing filter at the end of filtration?</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" type="text" v-model="pressureDropExistingPsig">
+						<input class="form-control" type="text" data-measurementName="Psig" name = "pressureDropExistingPsig" v-model="pressureDropExistingPsig">
 					   	<small class="text-muted">Psig</small>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" type="text" v-model="pressureDropCakeThicknessInches">
+						<input class="form-control" type="text" data-measurementName="Cake Thickness (inches)" name = "pressureDropCakeThicknessInches" v-model="pressureDropCakeThicknessInches">
 					   	<small class="text-muted">Cake Thickness (inches)</small>
 					</div>
 				</div>
@@ -1444,11 +1444,11 @@
 						<p>What maximum cake thickness can you achieve?</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" type="text" v-model="maximumCakeThicknessInches">
+						<input class="form-control" type="text" data-measurementName="Inches" name = "maximumCakeThicknessInches" v-model="maximumCakeThicknessInches">
 					   	<small class="text-muted">Inches</small>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" type="text" v-model="maximumCakeThicknessMM">
+						<input class="form-control" type="text" data-measurementName="Millimeter (mm)" name = "maximumCakeThicknessMM" v-model="maximumCakeThicknessMM">
 					   	<small class="text-muted">Millimeter (mm)</small>
 					</div>
 				</div>
@@ -2108,8 +2108,11 @@
 
 <script>
 jQuery(function($) {
-/*
+
+
 	new Vue({
+
+		
 		el: '#form',
 		
 		data: {
@@ -2233,13 +2236,15 @@ jQuery(function($) {
 		methods: {
 			submit: function() {
 				var vm = this;
-				yo(vm.$data);
+				vm.$data = yo(vm.$data);
+				//console.log(newData);
 				$.post('submit.php', vm.$data, function() {
-					
-					alert("Submitted");
+					//alert("Submitted");
 				});
 			},
 		},
+
+	
 	});
 
 		$('[v-model]').each(function() {
@@ -2247,14 +2252,22 @@ jQuery(function($) {
 				console.log(elem.attr('v-model'));
 		});
 
-*/
+
 
 
 
 });
+
+
 </script>
 
+
 <script src="testing.js"></script>
+<script src="yoStuff.js"></script>
+
+
+
+
 
 </body>
 

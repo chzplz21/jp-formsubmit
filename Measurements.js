@@ -25,8 +25,10 @@ var Measurements =  {
         
         for (var property in data) {
             if (attributeName == property) {
-                var measure = " " + measurementName;
-                data[property] += measure;
+                if (data[property].indexOf(measurementName) == -1) {
+                    var measure = " " + measurementName;
+                    data[property] += measure;
+                }
             }
         }
 

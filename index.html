@@ -818,21 +818,21 @@
 				</div>
 				<div class="row">
 					<div class="col-md-3 mb-3">
-						<label for="phoneAreaCode">Phone Number</label>
+						<label for="phoneAreaCode">Phone Area Code</label>
 					   	<input class="form-control" id="phoneAreaCode" v-model="phoneAreaCode" placeholder="Area Code" type="text">
 					</div>
 					<div class="col-md-6 mb-3">
-						<label>Number</label>
+						<label>Phone Number</label>
 					   	<input class="form-control" v-model="phoneNumber" placeholder="Phone Number" type="text">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3 mb-3">
-						<label for="cc-expiration">Fax Number</label>
+						<label for="cc-expiration">Fax Area Code</label>
 					   	<input class="form-control" v-model="faxAreaCode" placeholder="Area Code" type="text">
 					</div>
 					<div class="col-md-6 mb-3">
-						<label for="cc-cvv">Number</label>
+						<label for="cc-cvv">Fax Number</label>
 					   	<input class="form-control" v-model="faxNumber" placeholder="Fax Number" type="text">
 					</div>
 				</div>
@@ -865,7 +865,7 @@
 					<div class="col-md-4">
 						<div class="form-group">
 						<label>Enter<br>PPM</label>
-					   	<input class="form-control" data-measurementName = "(ppm %)" name = "solidsPpm" v-model="solidsPpm" type="text">
+					   	<input class="form-control" data-measurementName = "(ppmw)" name = "solidsPpm" v-model="solidsPpm" type="text">
 					   	<small class="text-muted">By ppm (%)</small>
 					</div>
 					</div>
@@ -955,7 +955,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>pH level</label>
-							<input class="form-control" data-measurementName="(ph)" name = "liquidPhLevel" v-model="liquidPhLevel">
+							<input class="form-control" data-measurementName="(pH)" name = "liquidPhLevel" v-model="liquidPhLevel">
 						</div>
 					</div>
 				</div>
@@ -1149,13 +1149,13 @@
 							</div>
 
 							<div class="col-md-4 mb-3">
-								<label>Enter cps</label>
+								<label></label>
 								<input type="text" class="form-control" data-measurementName="(Filtration Time (hr))" name = "processTypeBatchFiltrationTimeHrs" v-model="processTypeBatchFiltrationTimeHrs">
 								<small class="text-muted">Filtration time (hr)</small>
 							</div>
 
 							<div class="col-md-4 mb-3">
-								<label>Enter Degrees F</label>
+								<label></label>
 								<input type="text" class="form-control" data-measurementName="(Batch Time (hr))" name = "processTypeBatchBatchTimeHrs" v-model="processTypeBatchBatchTimeHrs">
 								<small class="text-muted">Batch Time (hr)</small>
 							</div>
@@ -1187,7 +1187,7 @@
 						<p>At what temperature do you wish to filter</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" placeholder="" data-measurementName="(Degrees Celcius)" name = "filterTempC"  v-model="filterTempC" type="text">
+						<input class="form-control" placeholder="" data-measurementName="(Degrees Celsius)" name = "filterTempC"  v-model="filterTempC" type="text">
 						<small class="text-muted">Celsius (C)</small>
 					</div>
 					<div class="col-md-4 mb-3">
@@ -1430,7 +1430,7 @@
 						<p>What is the pressure drop in your existing filter at the end of filtration?</p>
 					</div>
 					<div class="col-md-4 mb-3">
-						<input class="form-control" type="text" data-measurementName="(Psig)" name = "pressureDropExistingPsig" v-model="pressureDropExistingPsig">
+						<input class="form-control" type="text" data-measurementName="(Psid)" name = "pressureDropExistingPsig" v-model="pressureDropExistingPsig">
 					   	<small class="text-muted">Psig</small>
 					</div>
 					<div class="col-md-4 mb-3">
@@ -2256,6 +2256,9 @@ jQuery(function($) {
 				console.log(elem.attr('v-model'));
 		});
 
+		Testing.addDummy();
+		Testing.testSubmit();
+
  
 
 });
@@ -2264,6 +2267,10 @@ jQuery(function($) {
 </script>
 
 <script src="Measurements.js"></script>
+<!--
+<script src="testing.js"></script>
+-->
+
 
 
 

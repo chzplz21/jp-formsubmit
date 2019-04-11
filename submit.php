@@ -1,9 +1,29 @@
 <?php
 
 $fields = array (
-  'faxNumber' => 'Number',
+  'date' => 'Date',
+  'companyName' => 'Company Name',
+  'firstName' => 'First Name',
+  'lastName' => 'Last Name',
+  'title' => 'Title',
+  'address' => 'Address',
+  'address2' => 'Address 2',
+  'country' => 'Country',
+  'state' => 'State/Province',
+  'zip' => 'Zip Code',
+  'phoneAreaCode' => 'Phone Area Code',
+  'phoneNumber' => 'Phone Number',
+  'faxAreaCode' => 'Fax Area Code',
+  'faxNumber' => 'Fax Number',
+  'email' => 'Email',
+  'solidsVolumePercent' => 'What is the percentage of solids present by volume?',
+  'solidsPpm' => 'What is the solids concentration by ppmw?',
+  'solidsWeight' => 'What is the percentage of solids present by weight?',
+  'solidsBulkDensityWetKgM3' => 'What is the bulk density of the cake wet?',
+  'solidsBulkDensityDryKgM3' => 'What is the bulk density of the cake dry?',
+  'liquidPhraseDescription' => 'Describe the liquid phase of the liquid to be filtered (Chemical or technical description)',
   'liquidType' => 'Is the liquid?',
-  'liquidAcidOrBaseDescription' => 'if the liquid is acidic or basic describe the acids or basis',
+  'liquidAcidOrBaseDescription' => 'if the liquid is acidic or basic describe the acids or bases',
   'liquidPhLevel' => 'ph Level',
   'liquidOther' => 'other',
   'liquidSpecificGravity' => 'What is the specific gravity of the liquid to be filtered?',
@@ -73,7 +93,7 @@ $fields = array (
 //file_put_contents("log.txt", print_r($_POST, true));
 
 
-$body = '';
+$body = "<h1>Submitted Funda Filter Questionnaire</h1>";
 foreach ($fields as $field => $label) {
 	if (isset($_POST[$field])) {
 
@@ -82,14 +102,16 @@ foreach ($fields as $field => $label) {
 			$value = implode(', ', $_POST[$field]);
 		} else {
 			$value = $_POST[$field];
-		}
+    }
 
-		$body .= "$label: " . $value . "\r\n\r\n";
+    
+		$body .= $label . ":<b>" . " " . $value . "</b><br><br>";
+		
 	}
 }
 
 
-
-mail('rothkopfwebworks@gmail.com', 'Steri Funda Filter Questionnaire', $body);
+$headers .= "Content-Type: text/html";
+mail('alberto@jp-webs.com', 'Steri Funda Filter Questionnaire', $body, $headers);
 
 
